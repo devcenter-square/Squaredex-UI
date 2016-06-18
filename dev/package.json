@@ -1,0 +1,33 @@
+{
+  "name": "squareDex",
+  "version": "1.0.0",
+   "engines": {
+    "node": "0.12.7"
+  },
+  "description": "Front end implementation for squareDex",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"echo hello world\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devcenter-square/Squaredex-UI.git"
+  },
+  "keywords": [
+    "Ministry",
+    "MDAS",
+    "Persons",
+    "Senators",
+    "Representatives",
+    "Budgets"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "git@github.com:devcenter-square/Squaredex-UI.git"
+  },
+  "homepage": "git@github.com:devcenter-square/Squaredex-UI.git#readme",
+  "dependencies": {
+    "node-static": "^0.7.7"
+  }
+}

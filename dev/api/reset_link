@@ -1,0 +1,10 @@
+{
+    "response": {
+        "message": "Mail sent successfully",
+        "data": {
+            "firstname": "Lanre",
+            "lastname": "Oyedotun",
+            "email": "admin@locent.com"
+        }
+    }
+}

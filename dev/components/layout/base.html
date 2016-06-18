@@ -1,0 +1,60 @@
+<div class="header">
+    <div class="container">
+        <div class="pull-left">
+            <div class="logo" ng-click="toggleSidebar()">
+                <p ui-sref="app.leaderboard" class="font-futura text-white hidden-xs">
+                    SquareDex
+                </p>
+                <span class="visible-mobile text-white"><i class="fa fa-bars m-l-md"></i></span>
+                <img class="visible-mobile" src="" alt="">
+            </div>
+        </div>
+        <div class="pull-right">
+            <div class="logged-in">
+                <div uib-dropdown class="dropdown">
+                    <span class="dropdown-toggle clear text-white clickable" id="user-settings" uib-dropdown-toggle>
+                        <span class="hidden-sm hidden-md text-capitalize">Ted Oladele</span>
+                        <b class="caret"></b>
+                    </span>
+                    <div class="uib-dropdown-menu" aria-labelledby="user-settings">
+                        <div class="menu-dropdown-header">
+                            <div class="pull-left m-r-sm">
+                                <i class="fa fa-2x fa-user text-primary"></i>
+                            </div>
+                            <div style="margin-left: 35px">
+                                <h5 class="text-ellipsis font-bold">Ted Oladele</h5>
+                                <h5 class="text-ellipsis">me@tobioladele.com</h5>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="menu-list">
+                            <a ng-click="logout()">
+                                <i class="fa fa-sign-out m-r-sm text-primary"></i> Sign Out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navigation b-t b-b">
+    <ul class="container font-gotham">
+        <div class="sidebar-logo visible-mobile">
+            <img src="" alt="">
+        </div>
+        <li ui-sref-active="active">
+            <a ui-sref="leaderboard.home">
+                <span>Leaderboard</span>
+            </a>
+        </li>
+        <li ui-sref-active="active">
+            <a ui-sref="history.home">
+                <span>History</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="content-wrap">
+    <div class="container fade-in no-padder-xs" ui-view></div>
+</div>

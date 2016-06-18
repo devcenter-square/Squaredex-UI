@@ -1,0 +1,24 @@
+{
+    "response": {
+        "message": "Logged successfully",
+        "data": {
+            "user": {
+                "firstname": "Lanre",
+                "lastname": "Oyedotun ",
+                "email": "test@dc.co",
+                "password": "password",
+                "exp": "2238879600000",
+                "organisation": {
+                    "name": "Delivery Science"
+                },
+                "verified": false,
+                "role": {
+                    "name": "Great Teammate"
+                }
+            },
+            "token": "JHGJHGJHGJHGHUYIUY87686hvnchgfHGFFHFHGJHGJH",
+            "exp": "2238879600000",
+            "iat": "1423772516947"
+        }
+    }
+}
