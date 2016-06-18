@@ -12,7 +12,7 @@ var static = require( 'node-static' ),
     http = require( 'http' );
 
 // config
-var file = new static.Server( './', {
+var file = new static.Server( './dev/', {
     cache: 3600,
     gzip: true
 } );
