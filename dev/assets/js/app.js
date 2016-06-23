@@ -26,7 +26,8 @@ angular.module('app', [
         'angularMoment',
         'app.history',
         'app.leaderboard',
-        'app.404'
+        'app.404',
+
     ])
     .run(['$rootScope', '$location', '$state', '$stateParams', 'Auth',
         function ($rootScope, $location, $state, $stateParams, Auth) {
