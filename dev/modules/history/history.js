@@ -1,4 +1,4 @@
-angular.module('app.history', ['ui.router'])
+angular.module('app.history', ['ui.router', '720kb.datepicker'])
 
 .config(['$stateProvider',
     function($stateProvider) {
