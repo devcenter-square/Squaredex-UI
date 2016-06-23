@@ -3867,11 +3867,15 @@ a.text-black:hover {
 }
 .choose-dates datepicker {
   width: auto;
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   font-family: inherit;
 }
 .choose-dates datepicker input {
   width: 120px;
+}
+.choose-dates datepicker:nth-of-type(1) {
+  margin-right: 0;
 }
 .clickable {
   cursor: pointer;
