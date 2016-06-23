@@ -1,0 +1,94 @@
+@brand-primary: #04A2DC;
+@brand-info: #2D91D9;
+@brand-success: #11A04E;
+@brand-warning: #fad733;
+@brand-danger: #f05050;
+@brand-light: #edf1f2;
+@brand-dark: #194167;
+@brand-black: #27517d;
+@brand-blacker: #284A76;
+@body-bg: white;
+@text-color: #57584E;
+@text-muted: lighten(@text-color, 30%);
+@font-family-sans-serif: "Lato",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+@font-family-futura: "FuturaBoldRegular",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+@font-family-serif: Georgia,
+"Times New Roman",
+Times,
+serif;
+@font-family-base: @font-family-sans-serif;
+@font-size-base: 16px;
+@font-size-lg: ceil(@font-size-base * 1.23); // ~20px
+@font-size-md: ceil(@font-size-base * 1.14); // ~16px
+@font-size-sm: ceil(@font-size-base * 0.92); // ~13px
+@font-size-xs: ceil(@font-size-base * 0.85); // ~12px
+@link-color: darken(@text-color, 15%);
+@link-hover-color: darken(@text-color, 30%);
+@border-radius-base: 2px;
+@border-color: darken(@brand-light, 5%);
+@line-height-base: 1.42857143; // 20/14
+@line-height-input: 2.22857143;
+@line-height-computed: floor(@font-size-base * @line-height-base); // ~20px
+@icon-css-prefix: i;
+// Buttons
+// -------------------------
+@btn-default-color: @text-color;
+@btn-default-bg: lighten(@brand-light, 5%);
+@btn-default-border: @border-color;
+@btn-border-radius: @border-radius-base;
+@input-border: darken(@border-color, 0%);
+@input-border-focus: @brand-info;
+@input-border-radius: @border-radius-base;
+@panel-bg: #fff;
+@panel-border: @border-color;
+@panel-heading-border: #fff;
+@panel-list-group-border: lighten(@border-color, 5%);
+@panel-border-radius: @border-radius-base;
+@panel-heading-bg: #fff;
+@panel-footer-bg: #f5f5f5;
+@nav-bg: lighten(@brand-light, 3%);
+@badge-bg: darken(@brand-light, 10%);
+@list-group-item-border: lighten(@border-color, 3%);
+@list-group-item-hover: darken(white, 1%);
+@list-group-item-focus: darken(@brand-light, 3%);
+@list-group-select-color: #dbeef9;
+@list-group-active-color: @brand-info;
+@table-border-color: lighten(@border-color, 4%);
+@table-striped-color: lighten(@brand-light, 4.5%);
+@arrow-width: 8px;
+@arrow-color: #fff;
+@arrow-outer-width: (@arrow-width + 1);
+@arrow-outer-color: rgba(0, 0, 0, .1);
+@switch-width: 35px;
+@switch-height: 20px;
+@switch-md-width: 40px;
+@switch-md-height: 24px;
+@switch-lg-width: 50px;
+@switch-lg-height: 30px;
+@app-aside-width: 200px;
+@app-aside-nav-height: 40px;
+@app-aside-folded-width: 120px;
+@app-aside-folded-nav-height: 93px;
+@app-aside-dock-media: 992px;
+@app-header-height: 50px;
+@app-header-md-height: 60px;
+@scroll-bar-width: 17px;
+@butterbar-height: 3px;
+@butterbar-time: 0.75s;
+@off-screen-width: 75%;
+// Screen Sizes
+// -------------------------
+@mobile: ~"all and (min-width: 320px) and (max-width: 640px)";
+@notmobile: ~"all and (min-width: 640px)";
+@tablet: ~"all and (min-width: 320px) and (max-width: 959px)";
+@custom: ~"all and (min-width: 320px) and (max-width: 1280px)";
+@desktop: ~"all and (min-width: 960px) and (max-width: 1199px)";
+@bigscreen: ~"all and (min-width: 768px)";

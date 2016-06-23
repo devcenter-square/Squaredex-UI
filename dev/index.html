@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SquareDex</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--CSS_VENDORS-->
+    <link rel="stylesheet" href="assets/vendor/angular/angular-chart/angular-chart.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/angular/angular-datepicker/angular-datepicker.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/angular/angular-loading-bar/loading-bar.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/angular/ngdialog/ngDialog-theme-plain.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/angular/ngdialog/ngDialog.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/angular/toaster/toaster.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/animate/animate.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/bootstraps/bootstraps.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/common/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="assets/vendor/font-awesome/font-awesome.css" type="text/css" />
+    <!--CSS_VENDORS END-->
+    <!--CSS_STYLES-->
+    <link rel="stylesheet" href="assets/css/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+    <!--CSS_STYLES END-->
+    <script src="assets/js/local.js"></script>
+    <!--JS_VENDORS-->
+    <script src="assets/vendor/angular/angular.js"></script>
+    <script src="assets/vendor/angular/angular-animate/angular-animate.js"></script>
+    <script src="assets/vendor/angular/angular-bootstrap/ui-bootstrap-custom-tpls-0.14.3.min.js"></script>
+    <script src="assets/vendor/angular/angular-chart/Chart.min.js"></script>
+    <script src="assets/vendor/angular/angular-chart/angular-chart.min.js"></script>
+    <script src="assets/vendor/angular/angular-currency-mask/angular-currency-mask.js"></script>
+    <script src="assets/vendor/angular/angular-datepicker/angular-datepicker.min.js"></script>
+    <script src="assets/vendor/angular/angular-gravatar/angular-gravatar.min.js"></script>
+    <script src="assets/vendor/angular/angular-loading-bar/loading-bar.min.js"></script>
+    <script src="assets/vendor/angular/angular-ui-router/angular-ui-router.js"></script>
+    <script src="assets/vendor/angular/moment/moment.min.js"></script>
+    <script src="assets/vendor/angular/ngdialog/ngDialog.min.js"></script>
+    <script src="assets/vendor/angular/ngstorage/ngStorage.js"></script>
+    <script src="assets/vendor/angular/oclazyload/ocLazyLoad.js"></script>
+    <script src="assets/vendor/angular/restangular/restangular.min.js"></script>
+    <script src="assets/vendor/angular/toaster/toaster.min.js"></script>
+    <script src="assets/vendor/angular/ui-paging/ui-paging.js"></script>
+    <script src="assets/vendor/angular/underscore/underscore-min.js"></script>
+    <script src="assets/vendor/sugar/sugar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.3/angular-sanitize.min.js"></script>
+    <script src="//cdn.jsdelivr.net/angular.moment/0.6.2/angular-moment.js"></script>
+    
+    <!--JS_VENDORS END-->
+    <!--JS_MODULES-->
+    <script src="modules/404/404.js"></script>
+    <script src="modules/access/access.js"></script>
+    <script src="modules/leaderboard/leaderboard.js"></script>
+    <script src="modules/history/history.js"></script>
+    <!--JS_MODULES END-->
+    <!--JS_SCRIPTS-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/controllers/modal.controllers.js"></script>
+    <script src="assets/js/directives/ui.date.js"></script>
+    <script src="assets/js/directives/ui.directives.js"></script>
+    <script src="assets/js/services/access-service.js"></script>
+    <script src="assets/js/services/auth-service.js"></script>
+    <script src="assets/js/services/local-service.js"></script>
+    <script src="assets/js/services/notification-service.js"></script>
+    <!--JS_SCRIPTS END-->
+</head>
+
+<body ng-controller="AppCtrl" ng-class="{'sidebar-menu-active': showSidebar}">
+    <toaster-container toaster-options="{'close-button': true}"></toaster-container>
+    <div class="app" id="app" ui-view></div>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+.btn {
+    font-weight: bold;
+    border-radius: @btn-border-radius;
+    outline: 0!important;
+    text-transform: initial;
+    line-height: @line-height-base;
+}
+
+.btn-link {
+    color: @text-color;
+    &.active {
+        webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.btn-default {
+    background: rgba(0, 0, 0, 0.05);
+    border: solid 1px #ECECEC;
+    color: @text-color;
+    &:hover {
+        background: rgba(0, 0, 0, 0.1);
+        color: @text-color;
+        border: solid 1px #ECECEC;
+    }
+    &.btn-bg {
+        border-color: rgba(0, 0, 0, 0.1);
+        background-clip: padding-box;
+    }
+}
+
+.btn-clear {
+    background: transparent;
+    border: solid 1px @brand-danger;
+    color: @brand-danger;
+    &:hover {
+        background: rgba(0, 0, 0, 0.05);
+        color: @brand-danger;
+    }
+}
+
+.btn-primary {
+    .button-variant(#fff, @brand-primary, @brand-primary);
+}
+
+.btn-success {
+    .button-variant(#fff, @brand-success, @brand-success);
+}
+
+.btn-info {
+    .button-variant(#fff, @brand-info, @brand-info);
+}
+
+.btn-warning {
+    .button-variant(#fff, @brand-warning, @brand-warning);
+}
+
+.btn-danger {
+    .button-variant(#fff, @brand-danger, @brand-danger);
+}
+
+.btn-dark {
+    .button-variant(#fff, @brand-dark, @brand-dark);
+}
+
+.btn-black {
+    .button-variant(#fff, @brand-black, @brand-black);
+}
+
+.btn-icon {
+    padding: 0 !important;
+    text-align: center;
+    width: 34px;
+    height: 34px;
+    i {
+        top: -1px;
+        position: relative;
+        line-height: 34px;
+    }
+    &.btn-sm {
+        width: 30px;
+        height: 30px;
+        i {
+            line-height: 30px;
+        }
+    }
+    &.btn-lg {
+        width: 45px;
+        height: 45px;
+        i {
+            line-height: 45px;
+        }
+    }
+}
+
+.btn-rounded {
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    &.btn-lg {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.btn {
+    > i {
+        &.pull-left,
+        &.pull-right {
+            line-height: @line-height-base;
+        }
+    }
+}
+
+.btn-block {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.btn-group-vertical > .btn:first-child:not(:last-child) {
+    border-top-right-radius: @border-radius-base;
+}
+
+.btn-group-vertical > .btn:last-child:not(:first-child) {
+    border-bottom-left-radius: @border-radius-base;
+}
+
+.btn-addon {
+    i {
+        margin: -7px -12px;
+        margin-right: 12px;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        float: left;
+        position: relative;
+        border-radius: @btn-border-radius 0 0 @btn-border-radius;
+        &.pull-right {
+            margin-right: -12px;
+            margin-left: 12px;
+            border-radius: 0 @btn-border-radius @btn-border-radius 0;
+        }
+    }
+    &.btn-sm {
+        i {
+            margin: -6px -10px;
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            &.pull-right {
+                margin-right: -10px;
+                margin-left: 10px;
+            }
+        }
+    }
+    &.btn-lg {
+        i {
+            margin: -11px -16px;
+            margin-right: 16px;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            &.pull-right {
+                margin-right: -16px;
+                margin-left: 16px;
+            }
+        }
+    }
+    &.btn-default {
+        i {
+            background-color: transparent;
+            border-right: 1px solid @border-color;
+        }
+    }
+}
+
+.btn-groups .btn {
+    margin-bottom: 5px;
+}
+
+.loading-button {
+    position: relative;
+    &.ng-loading-failure {
+        background: @brand-danger;
+        border-color: @brand-danger;
+    }
+    .loading-state,
+    .loading-success,
+    .loading-failure {
+        opacity: 0;
+    }
+    .loading-success,
+    .loading-failure {
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+    &.ng-loading,
+    &.ng-loading-success,
+    &.ng-loading-failure {
+        pointer-events: none;
+        cursor: default;
+        .default-state {
+            opacity: 0;
+        }
+    }
+    &.ng-loading {
+        .loading-state {
+            opacity: 1;
+        }
+    }
+    &.ng-loading-success,
+    &.ng-loading-failure {
+        min-width: 167px;
+        i {
+            font-size: 20px;
+        }
+    }
+    &.ng-loading-success {
+        .loading-success {
+            opacity: 1;
+        }
+    }
+    &.ng-loading-failure {
+        .loading-failure {
+            opacity: 1;
+        }
+    }
+}
