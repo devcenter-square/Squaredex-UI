@@ -40,5 +40,6 @@ angular.module('app.access', ['ui.router'])
 
         $scope.userId = $stateParams.client_id;
         $scope.token = $stateParams.auth_token;
+        console.log($stateParams)
     }
 ]);
