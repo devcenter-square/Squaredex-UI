@@ -16,7 +16,7 @@ angular.module('app.access', ['ui.router'])
             },
         }).state('access.auth', {
             url: '/auth-return?auth_token&client_id&config&expiry',
-            templateUrl: '',
+            templateUrl: 'modules/access/auth-return.html',
             controller: 'SlackCtrl',
             role: {
                     access: AccessLevel.anon
