@@ -26,7 +26,8 @@ angular.module('app', [
         'angularMoment',
         'app.history',
         'app.leaderboard',
-        'app.404'
+        'app.404',
+
     ])
     .run(['$rootScope', '$location', '$state', '$stateParams', 'Auth',
         function ($rootScope, $location, $state, $stateParams, Auth) {
@@ -106,8 +107,8 @@ angular.module('app', [
   });
 })
 // oclazyload config
-.config(['$ocLazyLoadProvider', '$urlRouterProvider', '$httpProvider', 'RestangularProvider', 'ngDialogProvider',
-    function ($ocLazyLoadProvider, $urlRouterProvider, $httpProvider, RestangularProvider, ngDialogProvider) {
+.config(['$ocLazyLoadProvider', '$urlRouterProvider', '$httpProvider', 'RestangularProvider', 'ngDialogProvider', '$locationProvider',
+    function ($ocLazyLoadProvider, $urlRouterProvider, $httpProvider, RestangularProvider, ngDialogProvider, $locationProvider) {
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
@@ -124,6 +125,7 @@ angular.module('app', [
         });
         $urlRouterProvider.when('', '/leaderboard');
         $urlRouterProvider.otherwise('/404');
+        $locationProvider.html5Mode(true);
 
         ngDialogProvider.setDefaults({
             className: 'ngdialog-theme-plain',
