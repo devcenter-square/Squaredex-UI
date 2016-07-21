@@ -26,6 +26,7 @@ angular.module('app', [
         'app.history',
         'app.leaderboard',
         'app.404',
+        'app.auth'
 
     ])
     .run(['$rootScope', '$location', '$state', '$stateParams', 'Auth',

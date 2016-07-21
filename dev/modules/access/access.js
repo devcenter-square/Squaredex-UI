@@ -14,13 +14,6 @@ angular.module('app.access', ['ui.router'])
             role: {
                     access: AccessLevel.anon
             },
-        }).state('access.auth', {
-            url: '/auth-return',
-            templateUrl: 'modules/access/auth-return.html',
-            controller: 'SlackCtrl',
-            role: {
-                    access: AccessLevel.anon
-            },
         });
     }
 ])
@@ -46,11 +39,3 @@ angular.module('app.access', ['ui.router'])
     }
 ])
 
-.controller('SlackCtrl', ['$scope', '$rootScope', '$state', 'Notification', 'LocalService', 'Auth', '$stateParams',
-    function($scope, $rootScope, $state, Notification, LocalService, Auth, $stateParams) {
-        console.log($stateParams)
-        
-        $scope.userId = $stateParams.client_id;
-        $scope.token = $stateParams.auth_token;
-    }
-]);
