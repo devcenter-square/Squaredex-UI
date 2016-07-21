@@ -1,0 +1,90 @@
+<div class="col-md-12 inner-content animated  fadeInUp">
+    <div class="panel row wrapper no-border m-t-lg">
+        <div class="clearfix padder-lg hidden-mobile">
+            <span class="col-md-3 font-bold">Full Name</span>
+            <span class="col-md-3 font-bold">Slack Username</span>
+            <span class="col-md-3 font-bold">Karma</span>
+            <span class="col-md-3 font-bold"></span>
+        </div>
+        <div class="padder no-padder-xs">
+            <hr class="hidden-mobile m-b-xs">
+            <ul class="list-group bottom-border no-radius">
+                <li class="list-group-item">
+                    <span class="col-md-3 col-xs-3">Ted Oladele</span>
+                    <span class="col-md-3 col-xs-3 text-ellipsis">Ted</span>
+                    <span class="col-md-3 col-xs-3">20 Points</span>
+                    <span class="col-md-3 col-xs-3 text-right">
+                        <button class="btn btn-sm btn-primary" ng-click="requestKarma()">
+                        	Request karma
+                        </button>
+                    </span>
+                </li>
+                <li class="list-group-item">
+                    <span class="col-md-3 col-xs-3">Efe Money</span>
+                    <span class="col-md-3 col-xs-3 text-ellipsis">Efemoney</span>
+                    <span class="col-md-3 col-xs-3">15 Points</span>
+                    <span class="col-md-3 col-xs-3 text-right">
+                        <button class="btn btn-sm btn-primary" ng-click="requestKarma()">
+                        	Request karma
+                        </button>
+                    </span>
+                </li>
+                <li class="list-group-item">
+                    <span class="col-md-3 col-xs-3">Akin Falomo</span>
+                    <span class="col-md-3 col-xs-3 text-ellipsis">Akinfals</span>
+                    <span class="col-md-3 col-xs-3">15 Points</span>
+                    <span class="col-md-3 col-xs-3 text-right">
+                        <button class="btn btn-sm btn-primary" ng-click="requestKarma()">
+                        	Request karma
+                        </button>
+                    </span>
+                </li>
+                <li class="list-group-item">
+                    <span class="col-md-3 col-xs-3">Timi god</span>
+                    <span class="col-md-3 col-xs-3 text-ellipsis">Timigod</span>
+                    <span class="col-md-3 col-xs-3">10 Points</span>
+                    <span class="col-md-3 col-xs-3 text-right">
+                        <button class="btn btn-sm btn-primary" ng-click="requestKarma()">
+                        	Request karma
+                        </button>
+                    </span>
+                </li>
+                <li class="list-group-item b-b">
+                    <span class="col-md-3 col-xs-3">DJ Khaled</span>
+                    <span class="col-md-3 col-xs-3 text-ellipsis">Keys2success</span>
+                    <span class="col-md-3 col-xs-3">8 Points</span>
+                    <span class="col-md-3 col-xs-3 text-right">
+                        <button class="btn btn-sm btn-primary" ng-click="requestKarma()">
+                        	Request karma
+                        </button>
+                    </span>
+                </li>
+            </ul> 
+        </div>
+    </div>
+</div>
+<script type="text/ng-template" id="request-karma">
+    <div class="modal-header">Request Karma</div>
+    <div class="modal-body">
+        <form name="createProduct">
+            <div class="row">
+                <div class="form-group col-xs-12 col-md-12 m-b-sm">
+                    <label>Project</label>
+                    <select class="form-control" ng-model="guest.client">
+                        <option value="">Select project</option>
+                        <option ng-repeat="project in projects" value="{{project.id}}">{{project.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 m-b-sm">
+                    <label>Reason for karma</label>
+                    <input type="email" class="form-control" ng-model="client.airbnbEmail" placeholder="" required/>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="closeThisDialog()">Cancel</button>
+        <button type="submit" ng-disabled="createProduct.$invalid" ng-click="createClient()" ng-loading="created" class="btn btn-success pull-right">Send</button>
+    </div>
+</script>
