@@ -12,11 +12,11 @@ angular.module('app.auth', ['ui.router'])
                 url: '/auth-return',
                 templateUrl: 'modules/auth/index.html',
                 controller: 'SlackCtrl',
-                resolve: {
-                    User: ['API', function(API) {
-                        return API.all('leaderboard').getList();
-                    }]
-                }
+                // resolve: {
+                //     User: ['API', function(API) {
+                //         return API.all('leaderboard').getList();
+                //     }]
+                // }
             })
     }
 ])
