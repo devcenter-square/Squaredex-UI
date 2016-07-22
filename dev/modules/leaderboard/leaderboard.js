@@ -12,17 +12,18 @@ angular.module('app.leaderboard', ['ui.router'])
                 url: '/leaderboard',
                 templateUrl: 'modules/leaderboard/index.html',
                 controller: 'DashboardCtrl',
-                // resolve: {
-                //     leaderboard: ['API', function(API) {
-                //         return API.all('leaderboard').getList();
-                //     }]
-                // }
+                resolve: {
+                    leaderboard: ['API', function(API) {
+                        return API.all('leaderboard').getList();
+                    }]
+                }
             })
     }
 ])
 
-.controller('DashboardCtrl', ['$scope', '$state', 'API', 'ngDialog',
-    function ($scope, $state, API, ngDialog) {
+.controller('DashboardCtrl', ['$scope', '$state', 'API', 'ngDialog', 'leaderboard',
+    function ($scope, $state, API, ngDialog, leaderboard) {
+        console.log(leaderboard)
         $scope.requestKarma = function() {
             // $scope.user = user;
             ngDialog.open({ 
