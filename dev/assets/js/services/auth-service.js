@@ -16,6 +16,7 @@ angular.module('app.authService', [])
                 login: function (credentials) {
                     var deferred = $q.defer();
                     LocalService.set('authToken', JSON.stringify(credentials));
+                    console.log(credentials);
                     deferred.resolve(credentials);
                     return deferred.promise;
                 },
