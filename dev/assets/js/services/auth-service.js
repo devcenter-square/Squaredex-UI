@@ -10,28 +10,24 @@ angular.module('app.authService', [])
                     }
                 },
                 isAuthenticated: function () {
-                    return LocalService.get('auth_token');
+                    return LocalService.get('authToken');
                     
                 },
-                login: function () {
+                login: function (credentials) {
                     var deferred = $q.defer();
-                    var userData = {
-                        "token" : "lB7zIJmudd_iwbSv1-oBMQ",
-                        "client_id" : "SS66i3uDHrKOYALbeoKHEA",
-                        "expiry" : "1468705674",
-                        "uid" : "U0G7M5M9S"
-                    }
-                    LocalService.set('auth_token', JSON.stringify(userData));
-                    deferred.resolve(userData);
+                    LocalService.set('authToken', JSON.stringify(credentials));
+                    console.log(credentials);
+                    deferred.resolve(credentials);
                     return deferred.promise;
                 },
                 logout: function () {
                     // The backend doesn't care about logouts, delete the token and you're good to go.
-                    LocalService.unset('auth_token');
+                    LocalService.unset('authToken');
                 },
                 getUser: function () {
-                    if (LocalService.get('auth_token')) {
-                        return angular.fromJson(LocalService.get('auth_token')).uid;
+                    if (LocalService.get('authToken')) {
+                        // console.log(LocalService.get('authToken'))
+                        return angular.fromJson(LocalService.get('authToken')).uid;
                     } else {
                         return false;
                     }
@@ -44,18 +40,17 @@ angular.module('app.authService', [])
             return {
                 request: function (config) {
                     var token;
-                    if (LocalService.get('auth_token')) {
-                        token = angular.fromJson(LocalService.get('auth_token')).token;
-                        // console.log(token)
+                    if (LocalService.get('authToken')) {
+                        token = angular.fromJson(LocalService.get('authToken')).auth_token;
                     }
                     if (token) {
-                        config.headers = 'Bearer ' + token;
+                        config.headers.Authorization = 'Bearer ' + token;
                     }
                     return config;
                 },
                 responseError: function (response) {
                     if (response.status === 401 || response.status === 403) {
-                        LocalService.unset('auth_token');
+                        LocalService.unset('authToken');
                         $injector.get('$state').go('access.login');
                     }
                     return $q.reject(response);

@@ -9,23 +9,34 @@ angular.module('app.auth', ['ui.router'])
                 templateUrl: 'components/layout/base.html',
             })
             .state('auth.home', {
-                url: '/auth-return',
+                url: '/auth-return?access-token&client&expiry&uid',
                 templateUrl: 'modules/auth/index.html',
                 controller: 'SlackCtrl',
-                // resolve: {
-                //     leaderboard: ['API', function(API) {
-                //         return API.all('leaderboard').getList();
-                //     }]
-                // }
             })
     }
 ])
 
 .controller('SlackCtrl', ['$scope', '$rootScope', '$state', 'Notification', 'LocalService', 'Auth', '$stateParams',
     function($scope, $rootScope, $state, Notification, LocalService, Auth, $stateParams) {
-        console.log($stateParams)
+
+        // console.log($stateParams)
+        var credentials = $stateParams;
         
-        $scope.userId = $stateParams.client_id;
-        $scope.token = $stateParams.auth_token;
+       	$scope.login = function() {
+            Auth.login(credentials)
+                .then(function(resp) {
+                    // $scope.$emit('fetchUserData', 'true');
+                    // console.log(resp)
+                    $state.go('leaderboard.home');
+                })
+                .catch(function(error) {
+                    console.log('error')
+                    $scope.$broadcast('loggedIn', false);
+                    var title = error.data.response.message || "Could not login. Please try again";
+                    Notification.error(title, error);
+                });
+        };
+
+        $scope.login();
     }
 ]);

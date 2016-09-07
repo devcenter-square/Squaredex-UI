@@ -20,18 +20,6 @@ angular.module('app')
             $scope.app = {
                 name: 'SquareDex',
                 version: '1.0.0',
-
-                settings: {
-                    themeID: 1,
-                    navbarHeaderColor: 'bg-black',
-                    navbarCollapseColor: 'bg-white-only',
-                    asideColor: 'bg-black',
-                    headerFixed: true,
-                    asideFixed: false,
-                    asideFolded: false,
-                    asideDock: false,
-                    container: false
-                }
             }
 
             $scope.user = Auth.getUser();
@@ -39,20 +27,20 @@ angular.module('app')
                 $scope.user = Auth.getUser();
             });
 
-            // save settings to local storage
-            if (angular.isDefined($localStorage.settings)) {
-                $scope.app.settings = $localStorage.settings;
-            } else {
-                $localStorage.settings = $scope.app.settings;
-            }
-            $scope.$watch('app.settings', function () {
-                if ($scope.app.settings.asideDock && $scope.app.settings.asideFixed) {
-                    // aside dock and fixed must set the header fixed.
-                    $scope.app.settings.headerFixed = true;
-                }
-                // save to local storage
-                $localStorage.settings = $scope.app.settings;
-            }, true);
+            // // save settings to local storage
+            // if (angular.isDefined($localStorage.settings)) {
+            //     $scope.app.settings = $localStorage.settings;
+            // } else {
+            //     $localStorage.settings = $scope.app.settings;
+            // }
+            // $scope.$watch('app.settings', function () {
+            //     if ($scope.app.settings.asideDock && $scope.app.settings.asideFixed) {
+            //         // aside dock and fixed must set the header fixed.
+            //         $scope.app.settings.headerFixed = true;
+            //     }
+            //     // save to local storage
+            //     $localStorage.settings = $scope.app.settings;
+            // }, true);
 
             $scope.logout = function () {
                 Auth.logout();
